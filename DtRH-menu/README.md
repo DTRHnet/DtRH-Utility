@@ -1,11 +1,14 @@
 # dtrhMenu
 
-dtrhMenu is one of many versatile components which collectively create the dtrhUtility suite. It provides a comprehensive set of functions to create and manage both static and dynamic menu systems. Written in Python and utilizing the ncurses library, it ensures broad compatibility across various operating systems while maintaining very little library external library dependances. The system primarily renders menus via custom JSON formatted input, either through configuration files or on the fly via STDIN. Error checking, advanced logging capabilities, and design with modularity in mind make for seamless integration into diverse projects with little hassle.
+dtrhMenu is a versatile component within the dtrhUtility suite, providing a comprehensive set of functions to create and manage both static and dynamic menu systems. Written in Python and utilizing the ncurses library, it ensures broad compatibility across various operating systems with minimal external dependencies. 
+
+The system primarily renders menus via custom JSON formatted input, either from configuration files or dynamically through STDIN. Its design emphasizes robust error checking, advanced logging capabilities, and modularity, allowing for seamless integration into diverse projects with minimal hassle.
 
 ## Features
 - Dynamic configuration via JSON files
+- Modular design
 - Themed menus with customizable colors
-- Support for nested submenus
+- Support for nested submenus 
 - Multiple menu entry controls:
   - Static select
   - Multiple select
@@ -13,7 +16,7 @@ dtrhMenu is one of many versatile components which collectively create the dtrhU
   - Checkboxes
   - Radio buttons
 - Multi-language support
-- Advanced logging with five log levels
+- Advanced logging 
 
 ## Installation
 
