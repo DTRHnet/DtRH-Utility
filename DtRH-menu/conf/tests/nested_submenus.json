@@ -1,0 +1,124 @@
+{
+    "menu_title": "Main Menu",
+    "menu_items": [
+        {"id": "1", "label": "Start Game", "action": "start_game"},
+        {"id": "2", "label": "Options", "action": "submenu", "submenu": "options_menu"},
+        {"id": "3", "label": "Help", "action": "submenu", "submenu": "help_menu"},
+        {"id": "4", "label": "Exit", "action": "exit"}
+    ],
+    "submenus": {
+        "options_menu": {
+            "menu_title": "Options",
+            "menu_items": [
+                {"id": "1", "label": "Graphics", "action": "submenu", "submenu": "graphics_menu"},
+                {"id": "2", "label": "Sound", "action": "submenu", "submenu": "sound_menu"},
+                {"id": "3", "label": "Controls", "action": "submenu", "submenu": "controls_menu"},
+                {"id": "4", "label": "Back", "action": "back"}
+            ]
+        },
+        "graphics_menu": {
+            "menu_title": "Graphics Options",
+            "menu_items": [
+                {"id": "1", "label": "Resolution", "action": "multiple_select", "options": ["1920x1080", "1280x720", "800x600"]},
+                {"id": "2", "label": "Fullscreen", "action": "static_select", "options": ["On", "Off"]},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "sound_menu": {
+            "menu_title": "Sound Options",
+            "menu_items": [
+                {"id": "1", "label": "Master Volume", "action": "input", "input_type": "number"},
+                {"id": "2", "label": "Music Volume", "action": "input", "input_type": "number"},
+                {"id": "3", "label": "Sound Effects Volume", "action": "input", "input_type": "number"},
+                {"id": "4", "label": "Back", "action": "back"}
+            ]
+        },
+        "controls_menu": {
+            "menu_title": "Controls Options",
+            "menu_items": [
+                {"id": "1", "label": "Key Bindings", "action": "submenu", "submenu": "key_bindings_menu"},
+                {"id": "2", "label": "Controller Settings", "action": "submenu", "submenu": "controller_settings_menu"},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "key_bindings_menu": {
+            "menu_title": "Key Bindings",
+            "menu_items": [
+                {"id": "1", "label": "Move Forward", "action": "input", "input_type": "text"},
+                {"id": "2", "label": "Move Backward", "action": "input", "input_type": "text"},
+                {"id": "3", "label": "Jump", "action": "input", "input_type": "text"},
+                {"id": "4", "label": "Back", "action": "back"}
+            ]
+        },
+        "controller_settings_menu": {
+            "menu_title": "Controller Settings",
+            "menu_items": [
+                {"id": "1", "label": "Sensitivity", "action": "input", "input_type": "number"},
+                {"id": "2", "label": "Invert Y-Axis", "action": "static_select", "options": ["Yes", "No"]},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "help_menu": {
+            "menu_title": "Help",
+            "menu_items": [
+                {"id": "1", "label": "How to Play", "action": "submenu", "submenu": "how_to_play_menu"},
+                {"id": "2", "label": "About", "action": "submenu", "submenu": "about_menu"},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "how_to_play_menu": {
+            "menu_title": "How to Play",
+            "menu_items": [
+                {"id": "1", "label": "Introduction", "action": "info", "info": "This game is a thrilling adventure..."},
+                {"id": "2", "label": "Controls", "action": "info", "info": "Use WASD to move, SPACE to jump..."},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "about_menu": {
+            "menu_title": "About",
+            "menu_items": [
+                {"id": "1", "label": "Version", "action": "info", "info": "Version 1.0.0"},
+                {"id": "2", "label": "Credits", "action": "info", "info": "Developed by a passionate team..."},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        }
+    },
+    "theme": {
+        "background_color": "black",
+        "text_color": "white",
+        "highlight_color": "cyan"
+    },
+    "language": "en",
+    "languages": {
+        "en": {
+            "menu_title": "Main Menu",
+            "options_menu": "Options",
+            "graphics_menu": "Graphics Options",
+            "sound_menu": "Sound Options",
+            "controls_menu": "Controls Options",
+            "key_bindings_menu": "Key Bindings",
+            "controller_settings_menu": "Controller Settings",
+            "help_menu": "Help",
+            "how_to_play_menu": "How to Play",
+            "about_menu": "About",
+            "start_game": "Start Game",
+            "exit": "Exit",
+            "back": "Back"
+        },
+        "es": {
+            "menu_title": "Menú Principal",
+            "options_menu": "Opciones",
+            "graphics_menu": "Opciones de Gráficos",
+            "sound_menu": "Opciones de Sonido",
+            "controls_menu": "Opciones de Controles",
+            "key_bindings_menu": "Asignación de Teclas",
+            "controller_settings_menu": "Configuración del Controlador",
+            "help_menu": "Ayuda",
+            "how_to_play_menu": "Cómo Jugar",
+            "about_menu": "Acerca de",
+            "start_game": "Iniciar Juego",
+            "exit": "Salir",
+            "back": "Atrás"
+        }
+    }
+}

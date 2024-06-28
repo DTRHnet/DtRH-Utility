@@ -1,0 +1,62 @@
+{
+    "menu_title": "Main Menu",
+    "menu_items": [
+        {"id": "1", "label": "Start Game", "action": "start_game"},
+        {"id": "2", "label": "Options", "action": "submenu", "submenu": "options_menu"},
+        {"id": "3", "label": "Exit", "action": "exit"}
+    ],
+    "submenus": {
+        "options_menu": {
+            "menu_title": "Options",
+            "menu_items": [
+                {"id": "1", "label": "Graphics", "action": "submenu", "submenu": "graphics_menu"},
+                {"id": "2", "label": "Sound", "action": "submenu", "submenu": "sound_menu"},
+                {"id": "3", "label": "Gameplay", "action": "submenu", "submenu": "gameplay_menu"},
+                {"id": "4", "label": "Back", "action": "back"}
+            ]
+        },
+        "graphics_menu": {
+            "menu_title": "Graphics Options",
+            "menu_items": [
+                {"id": "1", "label": "Resolution", "action": "multiple_select", "options": ["1920x1080", "1280x720", "800x600"]},
+                {"id": "2", "label": "Fullscreen", "action": "static_select", "options": ["On", "Off"]},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        },
+        "sound_menu": {
+            "menu_title": "Sound Options",
+            "menu_items": [
+                {"id": "1", "label": "Master Volume", "action": "input", "input_type": "number"},
+                {"id": "2", "label": "Music Volume", "action": "input", "input_type": "number"},
+                {"id": "3", "label": "Sound Effects Volume", "action": "input", "input_type": "number"},
+                {"id": "4", "label": "Back", "action": "back"}
+            ]
+        },
+        "gameplay_menu": {
+            "menu_title": "Gameplay Options",
+            "menu_items": [
+                {"id": "1", "label": "Difficulty", "action": "radio", "options": ["Easy", "Normal", "Hard"]},
+                {"id": "2", "label": "Enable Cheats", "action": "checkbox", "options": ["God Mode", "Unlimited Ammo", "No Clip"]},
+                {"id": "3", "label": "Back", "action": "back"}
+            ]
+        }
+    },
+    "theme": {
+        "background_color": "black",
+        "text_color": "white",
+        "highlight_color": "cyan"
+    },
+    "language": "en",
+    "languages": {
+        "en": {
+            "menu_title": "Main Menu",
+            "options_menu": "Options",
+            "graphics_menu": "Graphics Options",
+            "sound_menu": "Sound Options",
+            "gameplay_menu": "Gameplay Options",
+            "start_game": "Start Game",
+            "exit": "Exit",
+            "back": "Back"
+        }
+    }
+}
