@@ -1,6 +1,3 @@
-### README.md
-
-```markdown
 # DtRH Utility Suite
 
 The DtRH Utility Suite is a comprehensive collection of modular tools designed to enhance terminal-based applications. It includes customizable menu systems, advanced logging capabilities, a flexible styling framework, robust communication classes, and a simplified tmux wrapper. All modules are built to integrate seamlessly and provide a robust user experience.
@@ -41,7 +38,7 @@ The DtRH-Comm module provides robust communication classes with support for tool
 
 ### 5. DtRH-tmux
 
-The DtRH-tmux is a simplified tmux wrapper built with simplicity in mind, without the need for libtmux, featuring:
+DtRH-tmux is a simplified tmux wrapper built with ease of use in mind. It does not require libtmux and its implementation is not as strict in comparison, however, the caveate less overall control. Features include
 
 - **Ease of Use**: Straightforward interface for tmux commands.
 - **Session and Window Management**: Simplified methods to create and control tmux sessions and windows.
@@ -51,7 +48,7 @@ The DtRH-tmux is a simplified tmux wrapper built with simplicity in mind, withou
 
 To install the DtRH Utility Suite, clone the repository and install the necessary dependencies:
 
-```bash
+``` bash
 git clone https://github.com/DTRHnet/DtRH-Utility.git
 cd DtRH-Utility
 pip install -r requirements.txt
@@ -64,4 +61,3 @@ Each module is designed to be used independently or in combination. Refer to the
 ## License
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
-```
