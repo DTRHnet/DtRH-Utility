@@ -165,31 +165,3 @@ dev_logger.debug("Debugging information")
 dev_logger.info("Development log entry")
 ```
 
-## License
-
-This project is licensed under the MIT License.
-```
-
-And here's the `CHANGELOG.md`:
-
-```markdown
-# CHANGELOG
-
-## [1.0.0] - YYYY-MM-DD
-
-### Added
-
-- Initial release of `dtrhLogger`.
-- Rich console output with `rich` library.
-- File logging with configurable rotation.
-- JSON-formatted logging for web applications.
-- Thread-safe logging.
-- Configurable logging settings via JSON file.
-- Logging summary with call count and execution times.
-
-### Improved
-
-- Enhanced readability of log outputs.
-- Added threading support for concurrent environments.
-- Optimized logging performance by minimizing overhead.
-
