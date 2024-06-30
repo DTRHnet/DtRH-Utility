@@ -4,7 +4,7 @@
 
 ### CHANGELOG.md
 
-## v0.0.2 - 2024-06-29
+## [v0.0.2] - 2024-06-29
 ### Added
 - Modularized schema definitions into `schemas.py` for easier expansion and modification.
 - Detailed logging within the menu system for better debugging and traceability.
