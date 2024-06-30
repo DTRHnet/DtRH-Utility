@@ -1,8 +1,9 @@
-# DtRH-Logger 
+
+# DtRH-Logger
 
 ## Overview
 
-`dtrhLogger` is a Python logging utility that enhances application observability through advanced logging features, thread safety, and configurable options. It integrates with the `rich` library for pretty console output and supports various logging mechanisms including a separate module for trace.
+DtRH-Logger is a Python logging utility that enhances application observability through advanced logging features, thread safety, and configurable options. It integrates with the `rich` library for pretty console output and supports various logging mechanisms.
 
 ## Features
 
@@ -66,17 +67,86 @@
 
 ## Usage
 
-1. Set up logging configuration in `logging_config.json` or via environment variables.
-2. Use the logging functions provided in `dtrhLogger.py`.
-3. Run your Python script:
-   ```bash
-   python dtrhLogger.py
-   ```
+### Setting Up Logging Configuration
 
-4. View logs in real-time:
-   ```bash
-   tail -f trace.log
-   ```
+1. Create a `logging_config.json` file in the project root:
+    ```json
+    {
+        "log_level": "DEBUG",
+        "log_file": "app.log",
+        "rotation": "size",
+        "interval": 1,
+        "when": "midnight",
+        "max_bytes": 10485760,
+        "backup_count": 5
+    }
+    ```
+
+2. Set the environment variable to use this configuration file:
+    ```bash
+    export LOGGING_CONFIG_FILE=logging_config.json
+    ```
+
+### Using the Logger
+
+1. Import the logger and initialize it based on the configuration:
+    ```python
+    from dtrhLogger import DevLogger
+
+    dev_logger = DevLogger('Dev')
+    dev_logger.debug("Debugging information")
+    dev_logger.info("Development log entry")
+    ```
+
+### Using Tracing with the Logger
+
+1. **Decorator Approach**:
+    - Use the `@trace_process` decorator to trace a function:
+    ```python
+    from dtrhLogger import trace_process
+
+    @trace_process
+    def example_function():
+        print("Example function started")
+        time.sleep(1)
+        print("Example function ended")
+
+    # Running the example function
+    if __name__ == "__main__":
+        example_function()
+    ```
+
+2. **Manual Tracing**:
+    - For more control, manually start and stop tracing:
+    ```python
+    from dtrhLogger import Tracer
+
+    tracer = Tracer()
+
+    def example_function():
+        tracer.start_tracing()
+        print("Example function started")
+        time.sleep(1)
+        print("Example function ended")
+        tracer.stop_tracing()
+        tracer.log_summary()
+
+    # Running the example function
+    if __name__ == "__main__":
+        example_function()
+    ```
+
+### Viewing Logs
+
+1. Run your Python script:
+    ```bash
+    python dtrhLogger.py
+    ```
+
+2. View logs in real-time:
+    ```bash
+    tail -f trace.log
+    ```
 
 ## Configuration
 
@@ -94,3 +164,32 @@
 dev_logger.debug("Debugging information")
 dev_logger.info("Development log entry")
 ```
+
+## License
+
+This project is licensed under the MIT License.
+```
+
+And here's the `CHANGELOG.md`:
+
+```markdown
+# CHANGELOG
+
+## [1.0.0] - YYYY-MM-DD
+
+### Added
+
+- Initial release of `dtrhLogger`.
+- Rich console output with `rich` library.
+- File logging with configurable rotation.
+- JSON-formatted logging for web applications.
+- Thread-safe logging.
+- Configurable logging settings via JSON file.
+- Logging summary with call count and execution times.
+
+### Improved
+
+- Enhanced readability of log outputs.
+- Added threading support for concurrent environments.
+- Optimized logging performance by minimizing overhead.
+
