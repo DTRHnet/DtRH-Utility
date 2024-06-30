@@ -1,8 +1,8 @@
-# dtrhLogger
+# DtRH-Logger 
 
 ## Overview
 
-`dtrhLogger` is a Python logging utility that enhances application observability through advanced logging features, thread safety, and configurable options. It integrates with the `rich` library for pretty console output and supports various logging mechanisms.
+`dtrhLogger` is a Python logging utility that enhances application observability through advanced logging features, thread safety, and configurable options. It integrates with the `rich` library for pretty console output and supports various logging mechanisms including a separate module for trace.
 
 ## Features
 
