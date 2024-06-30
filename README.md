@@ -19,7 +19,8 @@ The DtRH-Logger is a versatile logging system tailored for terminal applications
 - **Comprehensive Logging**: Supports multiple log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL).
 - **File and Console Outputs**: Logs can be written to both a file and the console for easy monitoring.
 - **Flexible Configuration**: Customize log formats and destinations.
-
+- **Function Tracing Module**:
+- 
 ### 3. DtRH-Style
 
 The DtRH-Style module offers a powerful CLI styling system that includes:
