@@ -25,7 +25,7 @@ from queue import Queue             # Thread-safe queue implementation
 from dtrhStyle import ThemeManager  # Custom theme management for the menu
 from dtrhLogger import DtrhLogger   # Custom logging for the application
 from dtrhParser import pJSON        # Custom JSON parsing
-from schema import * # JSON schemas for STDIN
+from schemap import * # JSON schemas for STDIN
 
 
 # ======================
