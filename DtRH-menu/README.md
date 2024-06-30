@@ -50,3 +50,46 @@ Please note that menu creation via stdin is still a work in progress due to how 
 nmap -sn 10.0.0.1/24 | grep -v Host | grep 10 | awk -F' ' '{print $5}' | python3 dtrhMenu.py
 ```
 
+## Customizing JSON Schemas
+
+DtRH-Menu builds menus by processing JSON data in accordance with schemas as provided or built in the file 'schema.py'. An example is shown below:
+
+```python
+# schemas.py
+
+menu_schema = {
+    "type": "object",
+    "properties": {
+        "menu_title": {"type": "string"},
+        "language": {"type": "string"},
+        "theme": {"type": "object"},
+        "menu_items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {"type": "string"},
+                    "action": {"type": "string"}
+                },
+                "required": ["label", "action"]
+            }
+        },
+        "submenus": {"type": "object"},
+        "languages": {"type": "object"}
+    },
+    "required": ["menu_title", "language", "menu_items"]
+}
+
+```
+This is a work in progress. Schemas have been separated from the dtrhMenu.py source code in v0.0.2. Full documentation is to come.
+
+## License
+
+See LICENSE.md
+
+
+
+
+https://dtrh.net
+< admin [at] dtrh.net >
+
