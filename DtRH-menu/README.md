@@ -1,5 +1,7 @@
 # DtRH-Menu
 
+![DtRH-Menu Example](https://dtrh.net/dtrhmenu.png)
+
 DtRH-Menu is a versatile component within the DtRH-Utility suite, with the aim of providing a comprehensive set of functions to create and manage both static and dynamic menu systems. It is written in Python and utilizes the ncurses library to ensure broad compatibility across various operating systems with minimal external dependencies. 
 
 The system primarily renders menus via custom JSON formatted input, either from configuration files or dynamically through STDIN. Its design emphasizes robust error checking, advanced logging capabilities, and modularity, allowing for seamless integration into diverse projects with minimal hassle.
