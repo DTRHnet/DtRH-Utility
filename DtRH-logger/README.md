@@ -57,7 +57,7 @@ DtRH-Logger is a Python logging utility that enhances application observability 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/DTRHnet/DtRH-Utility.git
    ```
 
 2. Install dependencies:
